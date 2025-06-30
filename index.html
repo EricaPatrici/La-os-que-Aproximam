@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Laços que Aproximam</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="img/incone-removebg-preview.png" />
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.min.js"></script>
+  <script src="sketch.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Laços que Aproximam</h1>
+    <p>Festejando a conexão entre o campo e a cidade com união e respeito.</p>
+  </header>
+
+  <main>
+    <section class="imagens">
+      <img src="img/campo.jpg" alt="Vida no campo" />
+      <img src="img/cidade.jpg" alt="Vida na cidade" />
+    </section>
+
+    <section class="texto">
+      <h2>Conexão que Gera Vida</h2>
+      <p>
+        A relação entre o campo e a cidade vai além do fornecimento de alimentos.
+        É uma troca de cultura, saberes e modos de viver. Celebrar essa conexão
+        é valorizar cada passo que une as pessoas e os territórios.
+      </p>
+      <button class="botao" onclick="abrirModal()">Saiba Mais</button>
+    </section>
+
+    <!-- Seção: Vida no Campo -->
+    <section class="campo-cidade">
+      <h2>Vida no Campo</h2>
+      <p>
+        A vida no campo é marcada por paisagens tranquilas, contato direto com a natureza
+        e uma rotina ligada à agricultura, pecuária e cultivo sustentável. O campo fornece
+        alimentos, matérias-primas e saberes tradicionais importantes para a sociedade.
+      </p>
+    </section>
+
+    <!-- Seção: Vida na Cidade -->
+    <section class="campo-cidade">
+      <h2>Vida na Cidade</h2>
+      <p>
+        A cidade é o centro de inovação, tecnologia e serviços. Com sua infraestrutura
+        moderna, ela conecta pessoas e ideias, promovendo o desenvolvimento econômico
+        e oferecendo acesso à educação, saúde, cultura e lazer.
+      </p>
+    </section>
+
+    <!-- Seção: Colaboração Campo-Cidade -->
+    <section class="colaboracao">
+      <h2>Colaboração entre Campo e Cidade</h2>
+      <div class="colaboracao-conteudo">
+        <div class="coluna">
+          <h3>Como o Campo Ajuda a Cidade</h3>
+          <ul>
+            <li>Produz alimentos frescos e saudáveis.</li>
+            <li>Fornece matérias-primas como algodão, madeira e leite.</li>
+            <li>Contribui com a preservação ambiental e produção sustentável.</li>
+            <li>Garante segurança alimentar e abastecimento constante.</li>
+          </ul>
+        </div>
+        <div class="coluna">
+          <h3>Como a Cidade Ajuda o Campo</h3>
+          <ul>
+            <li>Oferece tecnologia para modernizar a agricultura.</li>
+            <li>Disponibiliza acesso a serviços de saúde e educação.</li>
+            <li>Gera investimentos e oportunidades para o campo crescer.</li>
+            <li>Cria mercados para escoamento da produção rural.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <div id="animacao-canvas"></div>
+  </main>
+
+  <!-- Modal -->
+  <div id="janelaModal" class="modal">
+    <div class="modal-conteudo">
+      <span class="fechar" onclick="fecharModal()">&times;</span>
+      <h2>Mais sobre a Conexão Campo-Cidade</h2>
+      <p>
+        O campo abastece a cidade com alimentos, fibras e recursos naturais, enquanto a cidade contribui
+        com tecnologia, serviços e cultura. É essencial promover políticas que fortaleçam essa parceria,
+        respeitando as particularidades de cada espaço e garantindo qualidade de vida para todos.
+      </p>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 Erica Patricia Oliveira. Todos os direitos reservados.
+  </footer>
+
+  <script>
+    function abrirModal() {
+      document.getElementById("janelaModal").style.display = "block";
+    }
+
+    function fecharModal() {
+      document.getElementById("janelaModal").style.display = "none";
+    }
+
+    window.onclick = function(event) {
+      let modal = document.getElementById("janelaModal");
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    };
+  </script>
+</body>
+</html>
